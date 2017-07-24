@@ -24,7 +24,7 @@
 		In these files, you avoided at least 8 false positives and at least 0 false negatives in relation to unstructured merge.
 	</p>
 	<p>
-		On the other hand, you had at most 0 extra false positives and 0 extra false negatives.
+		On the other hand, you had at most 0 extra false positives and 6 extra false negatives.
 	</p>
 	<p>
 		s3m reported 6 conflicts, totalizing 32 conflicting LOC, compared to 14 conflicts and 79 conflicting LOC from unstructured merge, where 6 conflicts are equal.
@@ -32,6 +32,53 @@
 	<p>
 		Finally, s3m took 1,41 seconds, and unstructured merge 1,27 seconds to merge all these files.
 	</p>
+
+
+      <table class="striped">
+        <thead>
+          <tr>
+              <th>Conflict type</th>
+              <th>Unstructured Merge</th>
+              <th>s3m</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Imports</td>
+            <td>4</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Method body</td>
+            <td>3</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Method signature</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Others</td>
+            <td>6</td>
+            <td>0</td>
+          </tr>
+          <tr style="font-weight: bolder;">
+            <td>Total</td>
+            <td>14</td>
+            <td>6</td>
+          </tr>
+        </tbody>
+      </table>
+            
+      <br/><br/>
+	<h5>Scenarios</h5>
+	<p>
+		For more details about the results, see the resulting merge files bellow.
+	</p>
+
+
 	<div class="row">
 		<ul class="collapsible" data-collapsible="accordion">
 		  <li>
@@ -44,7 +91,7 @@
 				    	<p><a href="rev_c5bafa1_1f013d7/left/test_tools.py">Left [c5bafa1]</a></p>
 				    	<p><a href="rev_c5bafa1_1f013d7/base/test_tools.py">Base [cbd8c63]</a></p>
 				    	<p><a href="rev_c5bafa1_1f013d7/right/test_tools.py">Right [1f013d7]</a></p>
-				    	<p><a href="rev_c5bafa1_1f013d7/unstructured-result/test_tools.py">Unstructured merge result</a></p>
+				    	<p><a href="rev_c5bafa1_1f013d7/common-conflicts/test_tools.py">Common conflicts</a></p>
 				    </div>
 				  </li>
 				</ul>
@@ -60,7 +107,7 @@
 				    	<p><a href="rev_409cfda_d95acb6/left/tools.py">Left [409cfda]</a></p>
 				    	<p><a href="rev_409cfda_d95acb6/base/tools.py">Base [5f80300]</a></p>
 				    	<p><a href="rev_409cfda_d95acb6/right/tools.py">Right [d95acb6]</a></p>
-				    	<p><a href="rev_409cfda_d95acb6/unstructured-result/tools.py">Unstructured merge result</a></p>
+				    	<p><a href="rev_409cfda_d95acb6/common-conflicts/tools.py">Common conflicts</a></p>
 				    </div>
 				  </li>
 				</ul>
@@ -92,7 +139,7 @@
 				    	<p><a href="rev_4d4c2b3_32ef767/left/dal.py">Left [4d4c2b3]</a></p>
 				    	<p><a href="rev_4d4c2b3_32ef767/base/dal.py">Base [5043807]</a></p>
 				    	<p><a href="rev_4d4c2b3_32ef767/right/dal.py">Right [32ef767]</a></p>
-				    	<p><a href="rev_4d4c2b3_32ef767/unstructured-result/dal.py">Unstructured merge result</a></p>
+				    	<p><a href="rev_4d4c2b3_32ef767/common-conflicts/dal.py">Common conflicts</a></p>
 				    </div>
 				  </li>
 				</ul>
@@ -108,7 +155,7 @@
 				    	<p><a href="rev_57c5fb6_e9de076/left/objects.py">Left [57c5fb6]</a></p>
 				    	<p><a href="rev_57c5fb6_e9de076/base/objects.py">Base [f76a780]</a></p>
 				    	<p><a href="rev_57c5fb6_e9de076/right/objects.py">Right [e9de076]</a></p>
-				    	<p><a href="rev_57c5fb6_e9de076/unstructured-result/objects.py">Unstructured merge result</a></p>
+				    	<p><a href="rev_57c5fb6_e9de076/common-conflicts/objects.py">Common conflicts</a></p>
 				    </div>  
 				  </li>
 				</ul>
@@ -128,99 +175,13 @@
 				    </div>  
 				  </li>
 				  <li>
-				    <div class="collapsible-header">gluon/dal/base.py</div>
-				    <div class="collapsible-body"><p>
-				    	<p><a href="rev_21cb35d_5bc5d04/left/base.py">Left [21cb35d]</a></p>
-				    	<p><a href="rev_21cb35d_5bc5d04/base/base.py">Base [5ea654e]</a></p>
-				    	<p><a href="rev_21cb35d_5bc5d04/right/base.py">Right [5bc5d04]</a></p>
-				    	<p><a href="rev_21cb35d_5bc5d04/unstructured-result/base.py">Unstructured merge result</a></p>
-				    </div>  
-				  </li>
-				  <li>
 				    <div class="collapsible-header">gluon/dal/objects.py</div>
 				    <div class="collapsible-body"><p>
 				    	<p><a href="rev_21cb35d_5bc5d04/left/objects.py">Left [21cb35d]</a></p>
 				    	<p><a href="rev_21cb35d_5bc5d04/base/objects.py">Base [5ea654e]</a></p>
 				    	<p><a href="rev_21cb35d_5bc5d04/right/objects.py">Right [5bc5d04]</a></p>
-				    	<p><a href="rev_21cb35d_5bc5d04/unstructured-result/objects.py">Unstructured merge result</a></p>
+				    	<p><a href="rev_21cb35d_5bc5d04/common-conflicts/objects.py">Common conflicts</a></p>
 				    </div>  
-				  </li>
-				  <li>
-				    <div class="collapsible-header">gluon/dal/adapters/base.py</div>
-				    <div class="collapsible-body"><p>
-				    	<p><a href="rev_21cb35d_5bc5d04/left/base2.py">Left [21cb35d]</a></p>
-				    	<p><a href="rev_21cb35d_5bc5d04/base/base2.py">Base [5ea654e]</a></p>
-				    	<p><a href="rev_21cb35d_5bc5d04/right/base2.py">Right [5bc5d04]</a></p>
-				    	<p><a href="rev_21cb35d_5bc5d04/unstructured-result/base2.py">Unstructured merge result</a></p>
-				    </div>  
-				  </li>
-				  <li>
-				    <div class="collapsible-header">gluon/dal/adapters/google.py</div>
-				    <div class="collapsible-body"><p>
-				    	<p><a href="rev_21cb35d_5bc5d04/left/google.py">Left [21cb35d]</a></p>
-				    	<p><a href="rev_21cb35d_5bc5d04/base/google.py">Base [5ea654e]</a></p>
-				    	<p><a href="rev_21cb35d_5bc5d04/right/google.py">Right [5bc5d04]</a></p>
-				    	<p><a href="rev_21cb35d_5bc5d04/unstructured-result/google.py">Unstructured merge result</a></p>
-				    </div>  
-				  </li>
-				  <li>
-				    <div class="collapsible-header">gluon/dal/adapters/postgres.py</div>
-				    <div class="collapsible-body"><p>
-				    	<p><a href="rev_21cb35d_5bc5d04/left/postgres.py">Left [21cb35d]</a></p>
-				    	<p><a href="rev_21cb35d_5bc5d04/base/postgres.py">Base [5ea654e]</a></p>
-				    	<p><a href="rev_21cb35d_5bc5d04/right/postgres.py">Right [5bc5d04]</a></p>
-				    	<p><a href="rev_21cb35d_5bc5d04/unstructured-result/postgres.py">Unstructured merge result</a></p>
-				    </div>  
-				  </li>
-				  <li>
-				    <div class="collapsible-header">gluon/dal/adapters/teradata.py</div>
-				    <div class="collapsible-body"><p>
-				    	<p><a href="rev_21cb35d_5bc5d04/left/teradata.py">Left [21cb35d]</a></p>
-				    	<p><a href="rev_21cb35d_5bc5d04/base/teradata.py">Base [5ea654e]</a></p>
-				    	<p><a href="rev_21cb35d_5bc5d04/right/teradata.py">Right [5bc5d04]</a></p>
-				    	<p><a href="rev_21cb35d_5bc5d04/unstructured-result/teradata.py">Unstructured merge result</a></p>
-				    </div>  
-				  </li>
-				</ul>
-		    </div>
-		  </li>
-		  <li>
-		    <div class="collapsible-header">rev_ff43ab7_a2f5d1c</div>
-		    <div class="collapsible-body">
-		    	<ul class="collapsible" data-collapsible="accordion">
-				  <li>
-				    <div class="collapsible-header">gluon/dal/_load.py</div>
-				    <div class="collapsible-body"><p>
-				    	<p><a href="rev_ff43ab7_a2f5d1c/left/_load.py">Left [ff43ab7]</a></p>
-				    	<p><a href="rev_ff43ab7_a2f5d1c/base/_load.py">Base [5bc5d04]</a></p>
-				    	<p><a href="rev_ff43ab7_a2f5d1c/right/_load.py">Right [a2f5d1c]</a></p>
-				    	<p><a href="rev_ff43ab7_a2f5d1c/unstructured-result/_load.py">Unstructured merge result</a></p>   
-				    </div>  
-				  </li>
-				</ul>
-		    </div>
-		  </li>
-		  <li>
-		    <div class="collapsible-header">rev_428cc72_4a27ce1</div>
-		    <div class="collapsible-body">
-		    	<ul class="collapsible" data-collapsible="accordion">
-				  <li>
-				    <div class="collapsible-header">gluon/dal/objects.py</div>
-				    <div class="collapsible-body"><p>
-				    	<p><a href="rev_428cc72_4a27ce1/left/objects.py">Left [428cc72]</a></p>
-				    	<p><a href="rev_428cc72_4a27ce1/base/objects.py">Base [a2f5d1c]</a></p>
-				    	<p><a href="rev_428cc72_4a27ce1/right/objects.py">Right [4a27ce1]</a></p>
-				    	<p><a href="rev_428cc72_4a27ce1/unstructured-result/objects.py">Unstructured merge result</a></p>   
-				    </div>    
-				  </li>
-				  <li>
-				    <div class="collapsible-header">gluon/dal/adapters/postgres.py</div>
-				    <div class="collapsible-body"><p>
-				    	<p><a href="rev_428cc72_4a27ce1/left/postgres.py">Left [428cc72]</a></p>
-				    	<p><a href="rev_428cc72_4a27ce1/base/postgres.py">Base [a2f5d1c]</a></p>
-				    	<p><a href="rev_428cc72_4a27ce1/right/postgres.py">Right [4a27ce1]</a></p>
-				    	<p><a href="rev_428cc72_4a27ce1/unstructured-result/postgres.py">Unstructured merge result</a></p>   
-				    </div>    
 				  </li>
 				</ul>
 		    </div>
