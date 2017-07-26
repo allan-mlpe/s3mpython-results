@@ -21,7 +21,7 @@
 		s3m was invoked in 38184 PYTHON files so far.
 	</p>
 	<p>
-		In these files, you avoided at least 8 false positives and at least 0 false negatives in relation to unstructured merge.
+		In these files, you avoided at least 2 false positives and at least 0 false negatives in relation to unstructured merge.
 	</p>
 	<p>
 		On the other hand, you had at most 0 extra false positives and 6 extra false negatives.
@@ -30,48 +30,78 @@
 		s3m reported 6 conflicts, totalizing 32 conflicting LOC, compared to 14 conflicts and 79 conflicting LOC from unstructured merge, where 6 conflicts are equal.
 	</p>
 	<p>
-		Finally, s3m took 1,41 seconds, and unstructured merge 1,27 seconds to merge all these files.
+		Finally, s3m took 6,49 seconds, and unstructured merge 1,12 seconds to merge all these files.
 	</p>
 
 
       <table class="striped">
         <thead>
           <tr>
-              <th>Conflict type</th>
-              <th>Unstructured Merge</th>
-              <th>s3m</th>
+              <th>-</th>
+              <th>Conflict Type</th>
+              <th>File</th>
           </tr>
         </thead>
 
         <tbody>
           <tr>
+            <td>False positives added by unstructured merge</td>
             <td>Imports</td>
-            <td>4</td>
-            <td>2</td>
+            <td>
+            	<ul>
+            		<li>
+            			Unstructured result: <br/>
+            			<a href="https://s3mpython.firebaseapp.com/web2py/rev_21cb35d_5bc5d04/unstructured-result/__init__.py">
+            				rev_21cb35d_5bc5d04/gluon/tests/__init___.py
+            			</a>
+            		</li>
+            		<br/>
+            		<li>
+            			s3m result:<br/>
+            			<a href="https://s3mpython.firebaseapp.com/web2py/rev_21cb35d_5bc5d04/s3m-result/__init__.py">
+            				rev_21cb35d_5bc5d04/gluon/tests/__init___.py
+            			</a>
+            		</li>
+            	</ul>
+            </td>
           </tr>
           <tr>
-            <td>Method body</td>
-            <td>3</td>
-            <td>3</td>
+            <td>False positives added by s3m</td>
+            <td>-</td>
+            <td>-</td>
           </tr>
           <tr>
-            <td>Method signature</td>
-            <td>1</td>
-            <td>1</td>
+            <td>False negatives added by unstructured merge</td>
+            <td>-</td>
+            <td>-</td>
           </tr>
           <tr>
-            <td>Others</td>
-            <td>6</td>
-            <td>0</td>
-          </tr>
-          <tr style="font-weight: bolder;">
-            <td>Total</td>
-            <td>14</td>
-            <td>6</td>
+            <td>False negatives added by s3m</td>
+            <td>Python dictionary file</td>
+            <td>
+            	<ul>
+            		<li>
+            			Unstructured result:<br/>
+            			<a href="https://s3mpython.firebaseapp.com/web2py/rev_716b6e2_d06e4f6/unstructured-result/pt-br.py">
+            				rev_716b6e2_d06e4f6/applications/welcome/languages/pt-br.py
+            			</a>
+            		</li>
+            		<br/>
+            		<li>
+            			s3m result:<br/>
+            			<a href="https://s3mpython.firebaseapp.com/web2py/rev_716b6e2_d06e4f6/s3m-result/pt-br.py">
+            				rev_716b6e2_d06e4f6/applications/welcome/languages/pt-br.py
+            			</a>
+            		</li>
+            	</ul>
+            </td>
           </tr>
         </tbody>
       </table>
-            
+
+
+
+
       <br/><br/>
 	<h5>Scenarios</h5>
 	<p>
