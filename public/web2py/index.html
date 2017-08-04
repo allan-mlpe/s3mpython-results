@@ -6,6 +6,17 @@
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+       <style type="text/css">
+        ul p {
+            font-style: italic;
+        }
+
+        ul li {
+            font-family: monospace;
+        }
+
+      </style>
 </head>
 <body>
 	<nav>
@@ -39,7 +50,7 @@
           <tr>
               <th>-</th>
               <th>Conflict Type</th>
-              <th>File</th>
+              <th>Files</th>
           </tr>
         </thead>
 
@@ -49,6 +60,10 @@
             <td>Imports</td>
             <td>
             	<ul>
+            		<p>
+            			Comment: Both tools have reported conflict for different reasons. While this case was already a expected false positive for the unstructured merge, s3m has reported conflict due to parser failure.
+            		</p>
+            		
             		<li>
             			Unstructured conflicts: <br/>
             			<a href="https://s3mpython.firebaseapp.com/web2py/rev_21cb35d_5bc5d04/unstructured-result/__init__.py">
@@ -80,6 +95,10 @@
             <td>Python dictionary file</td>
             <td>
             	<ul>
+            		<p>
+            			Comment: These false negative added by s3m have occurred due to updates of a Python dictionary. In this case, s3m has duplicated the dictionary statement. Pretty printer problems has also been verified.
+            		</p>
+            		
             		<li>
             			Unstructured conflicts:<br/>
             			<a href="https://s3mpython.firebaseapp.com/web2py/rev_716b6e2_d06e4f6/unstructured-result/pt-br.py">
