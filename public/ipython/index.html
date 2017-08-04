@@ -6,6 +6,17 @@
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <style type="text/css">
+        ul p {
+            font-style: italic;
+        }
+
+        ul li {
+            font-family: monospace;
+        }
+
+      </style>
 </head>
 <body>
 	<nav>
@@ -40,16 +51,19 @@
           <tr>
               <th>-</th>
               <th>Conflict Type</th>
-              <th>File</th>
+              <th>Files</th>
           </tr>
         </thead>
 
         <tbody>
           <tr>
-            <td>False positives added by unstructured merge</td>
+            <td>False positives added by unstructured merge (1)</td>
             <td>Method body update</td>
             <td>
             	<ul>
+                    <p>
+                            Comment: conflict caused by inclusion of space in call of method. Since s3m ignores spaces, only unstructured merge has reported conflict.
+                        </p>
             		<li>
             			s3m result:
             			<a href="https://s3mpython.firebaseapp.com/ipython/rev_4e0a41d_e9e859c/s3m-result/transformers.py">
@@ -71,6 +85,9 @@
             <td>method deletion</td>
             <td>
             	<ul>
+                    <p>
+                        Comment: conflicts reported possibly due to parser problems in handling with Python comments.
+                    </p>
             		<li>
             			[deletion] s3m result (11 conflicts):
             			<a href="https://s3mpython.firebaseapp.com/ipython/rev_b6278b2_7a85cbc/test_db.py">
@@ -122,10 +139,14 @@
             <td>-</td>
           </tr>
           <tr>
-            <td>False negatives added by s3m</td>
+            <td>False negatives added by s3m (2)</td>
             <td>Method body update, variable declaration</td>
             <td>
             	<ul>
+                    <p>
+                        Comment: In both cases, s3m has considered only the commit made by left or right node of the three-way-merge.
+                    </p>
+
             		<li>
             			[method body] s3m result:
             			<a href="https://s3mpython.firebaseapp.com/ipython/rev_d2129b7_998b964/s3m-result/latex.py">
