@@ -16,63 +16,155 @@
 
 	<div class="container">
 	<h3 class="header">ipython</h3>
+
 	<h5>Summary</h5>
 	<p>
-		s3m was invoked in 12991 PYTHON files so far.
+		s3m was invoked in 21940 PYTHON files so far.
 	</p>
 	<p>
 		In these files, you avoided at least 0 false positives and at least 0 false negatives in relation to unstructured merge.
 	</p>
 	<p>
-		On the other hand, you had at most 0 extra false positives and 0 extra false negatives.
+		On the other hand, you had at most 0 extra false positives and 4 extra false negatives.
 	</p>
 	<p>
-		s3m reported 3 conflicts, totalizing 58 conflicting LOC, compared to 3 conflicts and 58 conflicting LOC from unstructured merge, where 0 conflicts are equal.
+		s3m reported 19 conflicts, totalizing 154 conflicting LOC, compared to 7 conflicts and 33 conflicting LOC from unstructured merge, where 3 conflicts are equal.
 	</p>
 	<p>
-		Finally, s3m took 0,27 seconds, and unstructured merge 0,1 seconds to merge all these files.
+		Finally, s3m took 6,28 seconds, and unstructured merge 0,46 seconds to merge all these files.
 	</p>
 
-	<div class="row">
-		<ul class="collapsible" data-collapsible="accordion">
-		  <li>
-		    <div class="collapsible-header">rev_f8225da_4ec57c3</div>
-		    <div class="collapsible-body">
-		    	<ul class="collapsible" data-collapsible="accordion">
-				  <li>
-				    <div class="collapsible-header">IPython/core/completer.py</div>
-				    <div class="collapsible-body"><p>
-				    	<p><a href="rev_f8225da_4ec57c3/left/completer.py">Left [f8225da]</a></p>
-				    	<p><a href="rev_f8225da_4ec57c3/base/completer.py">Base [9fbd7a0]</a></p>
-				    	<p><a href="rev_f8225da_4ec57c3/right/completer.py">Right [4ec57c3]</a></p>
-				    	<p><a href="rev_f8225da_4ec57c3/unstructured-result/completer.py">Unstructured merge result</a></p>
-				    </div>
-				  </li>
 
-				  <li>
-				    <div class="collapsible-header">IPython/core/tests/test_completer.py</div>
-				    <div class="collapsible-body"><p>
-				    	<p><a href="rev_f8225da_4ec57c3/left/test_completer.py">Left [f8225da]</a></p>
-				    	<p><a href="rev_f8225da_4ec57c3/base/test_completer.py">Base [9fbd7a0]</a></p>
-				    	<p><a href="rev_f8225da_4ec57c3/right/test_completer.py">Right [4ec57c3]</a></p>
-				    	<p><a href="rev_f8225da_4ec57c3/unstructured-result/test_completer.py">Unstructured merge result</a></p>
-				    </div>
-				  </li>
+	<table class="striped">
+        <thead>
+          <tr>
+              <th>-</th>
+              <th>Conflict Type</th>
+              <th>File</th>
+          </tr>
+        </thead>
 
-				  <li>
-				    <div class="collapsible-header">IPython/terminal/ptshell.py</div>
-				    <div class="collapsible-body"><p>
-				    	<p><a href="rev_f8225da_4ec57c3/left/ptshell.py">Left [f8225da]</a></p>
-				    	<p><a href="rev_f8225da_4ec57c3/base/ptshell.py">Base [9fbd7a0]</a></p>
-				    	<p><a href="rev_f8225da_4ec57c3/right/ptshell.py">Right [4ec57c3]</a></p>
-				    	<p><a href="rev_f8225da_4ec57c3/unstructured-result/ptshell.py">Unstructured merge result</a></p>
-				    </div>
-				  </li>
-				</ul>
-		    </div>
-		  </li>
-		</ul>
-	</div>
+        <tbody>
+          <tr>
+            <td>False positives added by unstructured merge</td>
+            <td>Method body update</td>
+            <td>
+            	<ul>
+            		<li>
+            			s3m result:
+            			<a href="https://s3mpython.firebaseapp.com/ipython/rev_4e0a41d_e9e859c/s3m-result/transformers.py">
+            				rev_4e0a41d_e9e859c/converters/transformers.py
+            			</a>            		
+            		</li>
+            		<br/>
+            		<li>
+            			unstructured result:<br/>
+            			<a href="https://s3mpython.firebaseapp.com/ipython/rev_4e0a41d_e9e859c/unstructured-result/transformers.py">
+            				rev_4e0a41d_e9e859c/converters/transformers.py
+            			</a>
+            		</li>
+            	</ul>
+            </td>
+          </tr>
+          <tr>
+            <td>False positives added by s3m (12)</td>
+            <td>method deletion</td>
+            <td>
+            	<ul>
+            		<li>
+            			[deletion] s3m result (11 conflicts):
+            			<a href="https://s3mpython.firebaseapp.com/ipython/rev_b6278b2_7a85cbc/test_db.py">
+            				rev_b6278b2_7a85cbc/IPython/parallel/tests/test_db.py
+            			</a>
+            		</li>
+
+            		<li>
+            			[deletion] s3m result:
+            			<a href="https://s3mpython.firebaseapp.com/ipython/rev_6728002_d303545/csshtmlheader.py">
+            				rev_6728002_d303545/IPython/nbconvert/transformers/csshtmlheader.py
+            			</a>
+            		</li>
+            		<!--
+            		<li>
+            			[dictionary update] s3m result:
+            			<a href="https://s3mpython.firebaseapp.com/ipython/rev_1442128_8e0ecc1/export.py">
+            				rev_1442128_8e0ecc1/IPython/nbconvert/exporters/export.py
+            			</a>
+            		</li>
+
+            		<li>
+            			[dictionary update] s3m result:
+            			<a href="https://s3mpython.firebaseapp.com/ipython/rev_5008c25_00cebaf/latex.py">
+            				rev_5008c25_00cebafIPython/nbconvert/exporters/latex.py
+            			</a>
+            		</li>
+
+            		<li>
+            			[dictionary update] s3m result:
+            			<a href="https://s3mpython.firebaseapp.com/ipython/rev_dd3a81d_89b52e3/exporter.py">
+            				rev_dd3a81d_89b52e3/IPython/nbconvert/exporters/exporter.py
+            			</a>
+            		</li>
+
+            		<li>
+            			[dictionary update] s3m result:
+            			<a href="https://s3mpython.firebaseapp.com/ipython/rev_b743e16_6148c2f/exporter.py">
+            				rev_b743e16_6148c2f/IPython/nbconvert/exporters/exporter.py
+            			</a>
+            		</li>
+            		-->
+            	</ul>
+            </td>
+          </tr>
+          <tr>
+            <td>False negatives added by unstructured merge</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>False negatives added by s3m</td>
+            <td>Method body update, variable declaration</td>
+            <td>
+            	<ul>
+            		<li>
+            			[method body] s3m result:
+            			<a href="https://s3mpython.firebaseapp.com/ipython/rev_d2129b7_998b964/s3m-result/latex.py">
+            				rev_d2129b7_998b964/converters/latex.py
+            			</a>            		
+            		</li>
+            		<br/>
+            		<li>
+            			[method body] unstructured result:<br/>
+            			<a href="https://s3mpython.firebaseapp.com/ipython/rev_d2129b7_998b964/unstructured-result/latex.py">
+            				rev_d2129b7_998b964/converters/latex.py
+            			</a>
+            		</li>
+            		<br/><br/>
+            		<li>
+            			[variable declaration] s3m result:
+            			<a href="https://s3mpython.firebaseapp.com/ipython/rev_5008c25_00cebaf/s3m-result/svg2pdf.py">
+            				rev_5008c25_00cebaf/converters/svg2pdf.py
+            			</a>            		
+            		</li>
+            		<br/>
+            		<li>
+            			[variable declaration] unstructured result:<br/>
+            			<a href="https://s3mpython.firebaseapp.com/ipython/rev_5008c25_00cebaf/unstructured-result/svg2pdf.py">
+            				rev_5008c25_00cebaf/converters/svg2pdf.py
+            			</a>
+            		</li>
+            	</ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+
+      <br/><br/>
+	
+	
 	</div>
 </body>
 </html>
